@@ -1,0 +1,11 @@
+import ThemeProvider from '../app/ThemeToggler';
+
+const Header = () => {
+  return (
+    <header>
+      <ThemeToggler />
+    </header>
+  )
+}
+
+export default Header

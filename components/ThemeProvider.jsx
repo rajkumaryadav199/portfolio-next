@@ -1,6 +1,8 @@
 'use client';
+
 import {ThemeProvider as NextThemeProvider} from "next-themes";
-const ThemeProvider = ({children, ...props}) => {
+export function ThemeProvider({children, ...props}){
+  console.log('pp',children, props)
   return (
     <NextThemeProvider {...props}>
       {children}
@@ -8,4 +10,3 @@ const ThemeProvider = ({children, ...props}) => {
   )
 }
 
-export default ThemeProvider;

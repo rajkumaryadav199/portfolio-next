@@ -13,7 +13,7 @@ const Header = () => {
 
   useEffect(()=>{
     const scrollYPos = window.addEventListener('scroll',()=>{
-      window.scrollY > 50 ? setHeader(true):setHeader(false);
+      window.scrollY > 50 ? setHeader(true) : setHeader(false);
     })
     return window.addEventListener('scroll', scrollYPos)
   })
@@ -27,7 +27,7 @@ const Header = () => {
             <Navbar 
               containerStyles='hidden xl:flex gap-x-8 items-center' 
               linkStyles='relative hover:text-primary transition-all'
-              underlineStyles='absolute left-8 top-full h-[2px] bg-primary w-full'
+              underlineStyles='absolute left-0 top-full h-[2px] bg-primary w-full'
             />
             <ThemeToggler />
             {/* Mobile nav */}

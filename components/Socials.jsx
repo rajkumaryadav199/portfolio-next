@@ -1,7 +1,9 @@
-"use client"
+"use client";
+
 import { Link } from 'lucide-react';
 import React from 'react';
 import { RiLinkedinFill, RiYoutubeFill, RiGithubFill,RiFacebookFill, RiTwitterFill } from 'react-icons/ri';
+
 const Socials = ({containerStyles, iconsStyles}) => {
   const icons = [
     {

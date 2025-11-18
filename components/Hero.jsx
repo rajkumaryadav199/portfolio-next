@@ -32,7 +32,12 @@ const Hero = () => {
                 <Socials containerStyles='flex gap-x-6 mx-auto xl:mx-0' iconsStyles='text-foreground text-[22px] hover:text-primary transition-all'  />
             </div>
             {/* Image */}
-            <div className='hidden xl:flex relative'>Image</div>
+            <div className='hidden xl:flex relative'>
+              {/* badge 1*/}
+              <Badge icon={<RiBriefcase4Fill/>} endCountNum={3} BadgeText='Years of the Experiance'/>
+              <div className='bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top -right-2'></div>
+              <Devimg containerStyle='bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom' imgSrc='/hero/developer.png' />
+            </div>
         </div>
         <div className='hidden md:flex left-2/4 bottom-44 xl:bottom-12 animate-bounce'>
             <RiArrowDownSLine className='text-3xl text-primary'/>

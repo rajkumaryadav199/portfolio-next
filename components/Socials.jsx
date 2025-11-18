@@ -1,7 +1,7 @@
 "use client"
-import { Link } from 'lucide-react';
+import Link from 'next/link';
 import React from 'react';
-import { RiLinkedinFill, RiYoutubeFill, RiGithubFill,RiFacebookFill, RiTwitterFill } from 'react-icons/ri';
+import { RiLinkedinFill, RiYoutubeFill, RiGithubFill, RiTwitterFill } from 'react-icons/ri';
 const Socials = ({containerStyles, iconsStyles}) => {
   const icons = [
     {
@@ -23,13 +23,16 @@ const Socials = ({containerStyles, iconsStyles}) => {
   ]
   return (
     <div className={`${containerStyles}`}>
-      {
-        icons.map((icons, index)=>{
-          return<Link href={`${icons.path}`} key={index}>
-            <div className={`${iconsStyles}`}>{icons.name}</div>
-          </Link>
-        })
-      }
+      {icons.map((icon, index) => (
+        <Link
+          href={icon.path}
+          key={index}
+          className={`${iconsStyles}`}
+          aria-label={icon.path.replace('/', '')}
+        >
+          {icon.name}
+        </Link>
+      ))}
     </div>
   )
 }
